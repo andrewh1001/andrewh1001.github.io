@@ -6,8 +6,13 @@
         <link rel="stylesheet" href="/assets/base.css">
         <link rel="stylesheet" href="/assets/style.css">
         <style>
-            ul {
-                display: flex;
+            body {
+                margin: 0px;
+            }
+
+            main {
+                margin-left: 20px;
+                margin-right: 20px;
             }
 
             .navbar {
@@ -16,7 +21,22 @@
                 width: max-content;
             }
 
+            .navbar ul {
+                list-style-type: none;
+                display: flex;
+                padding: 0px;
+                margin: 0px;
+                overflow: hidden;
+            }
+
+            .navbar li {
+                float: left;
+            }
+
             .nav-link {
+                text-decoration: none;
+                text-align: center;
+                display: block;
                 color: white;
                 font-weight: bold;
                 transition: color 0.2s;
@@ -28,21 +48,23 @@
         </style>
     </head>
     <body>
-        <div class="navbar">
+        <nav class="navbar">
             <ul>
                 <li><a title="Home" class="nav-link">Home</a></li>
                 <li><a title="About Me" class="nav-link">About Me</a></li>
                 <li><a title="Contact" href="/contact/" class="nav-link">Contact</a></li>
             </ul>
-        </div>
-         <h1>
-    	    Ching-Hsiang Huang <small>Andrew Huang</small>
-        </h1>
-        <h2>
-        	TW
-        </h2>
-        <p>
-        	Purdue University - Computer Engineering
-        </p>  
+        </nav>
+        <main>
+            <h1>
+                Ching-Hsiang Huang <small>Andrew Huang</small>
+            </h1>
+            <h2>
+                TW
+            </h2>
+            <p>
+                Purdue University - Computer Engineering
+            </p> 
+        </main>
     </body>
 </html>
