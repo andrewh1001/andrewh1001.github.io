@@ -11,5 +11,5 @@ app.mount("/assets", StaticFiles(directory="assets"), name="assets")
 
 @app.get("/index/", response_class=HTMLResponse)
 async def table(request: Request):
-    response = templates.TemplateResponse("test3.html", {"request": request}) 
+    response = templates.TemplateResponse("test4.html", {"request": request}) 
     return response
