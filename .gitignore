@@ -1,1 +1,3 @@
 *.pyc
+Gemfile.lock
+_site
