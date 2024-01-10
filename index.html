@@ -1,61 +1,11 @@
+---
+title: "Ching-Hsiang Huang Personal Website"
+---
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ching-Hsiang Huang Personal Website</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="/assets/images/website_logo.ico">
-        <link rel="stylesheet" href="/assets/base.css">
-        <link rel="stylesheet" href="/assets/style.css">
-        <style>
-            body {
-                margin: 0px;
-            }
-
-            main {
-                margin-left: 20px;
-                margin-right: 20px;
-            }
-
-            .navbar {
-                font-family: robotoMedium;
-            }
-
-            .navbar ul {
-                background-color: #00DDFF;
-                list-style-type: none;
-                display: flex;
-                padding: 0px;
-                margin: 0px;
-                overflow: hidden;
-            }
-
-            .navbar li {
-                float: left;
-            }
-
-            .nav-link {
-                padding: 15px;
-                text-decoration: none;
-                text-align: center;
-                display: block;
-                color: white;
-                font-weight: bold;
-                transition: color 0.2s;
-            }
-
-            .nav-link:hover {
-                color: grey;
-            }
-        </style>
-    </head>
+    {% include head.html %}
     <body>
-        <nav class="navbar">
-            <ul>
-                <li><a title="Home" href="/" class="nav-link">Home</a></li>
-                <li><a title="About Me"  href="/about_me/" class="nav-link">About Me</a></li>
-                <li><a title="Contact" href="/contact/" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
+        {% include nav.html %}
         <main>
             <h1>
                 Ching-Hsiang Huang <small>Andrew Huang</small>
