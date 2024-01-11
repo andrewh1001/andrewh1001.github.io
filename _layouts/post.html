@@ -1,9 +1,12 @@
 ---
 layout: default
 ---
-<div style="margin-left:20px;margin-right:20px;">
+<main>
+    <h1>{{ page.title }}</h1>
     <p>{{ page.date | date: "%-d %B %Y" }} - Written by {{ page.author }}</p>
     {{ content }}
-</div>
+</main>
+    
+
 
 <div class="bottom_space" style="margin-top: 50px;"></div>
