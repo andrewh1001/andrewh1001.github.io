@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<style>
+    table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+    }
+    
+    table, th, td {
+        text-align: center;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+
+    th {
+        font-size: 20px;
+    }
+
+    table th:first-of-type {
+        width: 10%;
+    }
+
+    table th:nth-of-type(2) {
+        width: 10%;
+    }
+
+    table th:nth-of-type(3) {
+        width: 10%;
+    }
+
+    table th:nth-of-type(4) {
+        width: 30%;
+    }
+
+    table th:nth-of-type(5) {
+        width: 40%;
+    }
+
+</style>
+<main>
+    <h1>{{ page.title }}</h1>
+    <br>
+    <div style="margin-left:20px;margin-right:20px;">
+        {{ content }}
+    </div>
+
+<div class="bottom_space" style="margin-top: 50px;"></div>
+</main>

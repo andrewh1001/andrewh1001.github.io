@@ -1,16 +1,49 @@
 ---
 layout: default
-title: Blog
+title: Posts
 ---
+<style>
+  hr {
+    border: none;
+    border-top: 5px double #333;
+    color: #333;
+    overflow: visible;
+  }
 
+  a {
+    text-decoration: none;
+  }
 
-<h1>Latest Posts</h1>
+  a:hover {
+    color: red;
+  }
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+</style>
+<main>
+  <h1>Pinned Posts</h1>
+
+  <ul style="list-style-type:none"> 
+    {% assign pinnedpost = site.other_posts | where:"type","pinned" %}
+    {% for post in pinnedpost %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      </li>
+      <hr width="100%" style="margin-left:-20px">
+    {% endfor %}
+  </ul>
+
+  <h1>Latest Posts</h1>
+  
+  <ul style="list-style-type:none">
+    {% assign posts = site.posts | where:"type","post" %}
+    {% for post in posts %}
+      {% if post.hidden == "False" %}
+        <li>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date: "%-d %B %Y" }}</h2>
+          {{ post.excerpt }}
+        </li>
+        <hr width="100%" style="margin-left:-20px">
+      {% endif %}
+    {% endfor %}
+  </ul>
+</main>
