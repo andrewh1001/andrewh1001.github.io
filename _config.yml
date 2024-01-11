@@ -1,6 +1,12 @@
+#Basic
 name: Andrew Huang
 test: A
 
 
 #timezone
-timezone: US/Eastern
+timezone: America/New_York
+
+#collections
+collections:
+  other_posts:
+    output: true
