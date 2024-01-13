@@ -1,0 +1,28 @@
+---
+layout: default
+type: pinned
+title: "Photos"
+author: Andrew
+hidden: "False"
+---
+<style>
+    .image {
+        width: 500px;
+        display: inline-block;
+    }
+
+    main {
+        text-align: center;
+        width: auto
+    }
+
+</style>
+<br>
+{% for image in site.static_files %}
+  {% if image.path contains 'assets/images/posts' %}
+    <div class="image">
+        <img src="{{ image.path }}" alt="" width="500">
+        <p>{{ image.modified_time }}</p>
+    </div>
+  {% endif %}
+{% endfor %}
